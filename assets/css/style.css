@@ -1,0 +1,962 @@
+
+/* GIRIJATMAK ARTS — Premium Ganpati Theme */
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --saffron: #a83b12;
+    --saffron-dark: #76270c;
+    --gold: #d6a647;
+    --cream: #fff9ef;
+    --text: #29231e;
+    --muted: #776b60;
+    --border: #f0dfc8;
+    --white: #ffffff;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: var(--cream);
+    color: var(--text);
+    line-height: 1.65;
+}
+
+/* Navigation */
+
+.topbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: linear-gradient(110deg, var(--saffron-dark), var(--saffron));
+    color: white;
+    padding: 15px max(4%, calc((100% - 1160px) / 2));
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    flex-wrap: wrap;
+    box-shadow: 0 4px 18px #5b210c20;
+}
+
+.brand {
+    font-size: 1.25rem;
+    font-weight: 900;
+    letter-spacing: 0.5px;
+    color: white;
+    text-decoration: none;
+}
+
+.topbar nav {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.topbar nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.95rem;
+    padding: 7px 10px;
+    border-radius: 7px;
+    transition: background 0.25s, color 0.25s;
+}
+
+.topbar nav a:hover {
+    background: #ffffff20;
+    color: #ffe3a0;
+}
+
+/* Main content */
+
+.container {
+    max-width: 1160px;
+    margin: 32px auto;
+    padding: 0 20px;
+    min-height: 70vh;
+}
+
+h1, h2, h3 {
+    line-height: 1.25;
+}
+
+h1 {
+    color: var(--saffron-dark);
+}
+
+.muted {
+    color: var(--muted);
+}
+
+/* Homepage hero */
+
+.hero {
+    position: relative;
+    overflow: hidden;
+    background:
+        radial-gradient(ellipse at top right, #ffffffb5, transparent 48%),
+        linear-gradient(125deg, #ffedce, #fbd19a);
+    padding: clamp(26px, 5vw, 58px);
+    border: 1px solid #f0d4a5;
+    border-radius: 24px;
+    margin-bottom: 32px;
+    box-shadow: 0 12px 35px #7c2d1210;
+}
+
+.hero h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    margin: 0 0 14px;
+    max-width: 780px;
+}
+
+.hero p {
+    max-width: 700px;
+}
+
+/* Idol catalogue heading */
+
+.catalogue-heading {
+    text-align: center;
+    margin: 12px 0 34px;
+}
+
+.catalogue-heading h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin: 8px 0;
+    letter-spacing: 0.5px;
+}
+
+.catalogue-heading h2 {
+    margin: 8px 0;
+    color: var(--saffron);
+    font-size: clamp(1.2rem, 3vw, 1.7rem);
+}
+
+.catalogue-heading > p:last-child {
+    max-width: 650px;
+    margin: 12px auto;
+}
+
+/* Grid and cards */
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 24px;
+    align-items: stretch;
+}
+
+.card,
+.panel {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 20px;
+    box-shadow: 0 5px 20px #6535140c;
+    transition: transform 0.28s ease, box-shadow 0.28s ease,
+                border-color 0.28s ease;
+}
+
+.card:hover,
+.panel:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 32px #65351418;
+    border-color: #dfbd80;
+}
+
+.card h3 {
+    margin: 10px 0;
+    color: var(--saffron-dark);
+    font-size: 1.25rem;
+}
+
+.card p {
+    overflow-wrap: anywhere;
+}
+
+.idol-card {
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.idol-image {
+    height: 290px;
+    background: linear-gradient(145deg, #fff0d7, #f8dfbd);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.idol-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 8px;
+    transition: transform 0.45s ease;
+}
+
+.idol-card:hover .idol-image img {
+    transform: scale(1.045);
+}
+
+.image-placeholder {
+    text-align: center;
+    color: var(--saffron);
+    padding: 20px;
+}
+
+.image-placeholder span {
+    font-size: 3rem;
+}
+
+.idol-details {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.idol-details .muted {
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 1.4px;
+    color: #9a6c25;
+}
+
+.idol-details .price {
+    margin: 8px 0;
+}
+
+.idol-details .btn {
+    margin-top: auto;
+    text-align: center;
+}
+
+.price {
+    font-weight: 900;
+    color: var(--saffron);
+    font-size: 1.4rem;
+}
+
+/* Buttons */
+
+.btn,
+button {
+    display: inline-block;
+    background: linear-gradient(110deg, var(--saffron), #c6531d);
+    color: white;
+    padding: 11px 17px;
+    border: 0;
+    border-radius: 9px;
+    text-decoration: none;
+    cursor: pointer;
+    font: inherit;
+    font-weight: 700;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s, opacity 0.2s;
+}
+
+.btn:hover,
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 7px 16px #9a341230;
+}
+
+.btn.secondary {
+    background: #57534e;
+}
+
+.btn.danger,
+button.danger {
+    background: #b91c1c;
+}
+
+.pill {
+    display: inline-block;
+    padding: 5px 11px;
+    background: #fff0d7;
+    color: #7c4514;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+/* Forms */
+
+.form {
+    max-width: 680px;
+}
+
+.field {
+    margin: 16px 0;
+}
+
+.field label {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.field input,
+.field textarea,
+.field select {
+    width: 100%;
+    padding: 12px 13px;
+    border: 1px solid #d6c4b4;
+    border-radius: 9px;
+    font: inherit;
+    background: white;
+    color: var(--text);
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.field input:focus,
+.field textarea:focus,
+.field select:focus {
+    outline: none;
+    border-color: var(--gold);
+    box-shadow: 0 0 0 3px #d6a64725;
+}
+
+/* Notices and tables */
+
+.notice {
+    padding: 13px 16px;
+    border-radius: 10px;
+    margin: 14px 0;
+    background: #e0f2fe;
+}
+
+.notice.success {
+    background: #dcfce7;
+}
+
+.notice.error {
+    background: #fee2e2;
+}
+
+.notice a {
+    color: inherit;
+}
+
+.table-wrap {
+    overflow-x: auto;
+    border-radius: 12px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+th,
+td {
+    padding: 12px;
+    border-bottom: 1px solid #eee5db;
+    text-align: left;
+    vertical-align: top;
+}
+
+th {
+    background: #ffedcf;
+}
+
+.actions {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.small {
+    font-size: 0.9rem;
+}
+
+/* Footer */
+
+.footer {
+    text-align: center;
+    padding: 28px 18px;
+    margin-top: 45px;
+    color: #76685d;
+    border-top: 1px solid var(--border);
+    background: #fff4e4;
+}
+
+/* Accessibility */
+
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid var(--gold);
+    outline-offset: 3px;
+}
+
+/* Mobile responsive */
+
+@media (max-width: 600px) {
+    .topbar {
+        position: static;
+        align-items: flex-start;
+        padding: 15px 18px;
+    }
+
+    .topbar nav {
+        gap: 6px;
+    }
+
+    .topbar nav a {
+        padding: 6px 8px;
+    }
+
+    .container {
+        margin: 22px auto;
+        padding: 0 14px;
+    }
+
+    .hero {
+        padding: 24px 20px;
+        border-radius: 16px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .idol-image {
+        height: 320px;
+    }
+
+    .card,
+    .panel {
+        border-radius: 14px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+/* ===== GIRIJATMAK ARTS PREMIUM HOMEPAGE ===== */
+
+.premium-hero {
+    position: relative;
+    overflow: hidden;
+    padding: 65px 35px;
+    border: 1px solid #e8c77b;
+    border-radius: 24px;
+    background:
+        radial-gradient(circle at top right, #fff0c2, transparent 42%),
+        linear-gradient(135deg, #fff8e8, #ffe1a3);
+    box-shadow: 0 12px 35px rgba(124, 45, 18, 0.10);
+}
+
+.premium-hero .hero-label {
+    color: #9a3412;
+    font-weight: 800;
+    letter-spacing: 2px;
+    font-size: 0.85rem;
+}
+
+.premium-hero h1 {
+    max-width: 750px;
+    margin: 15px 0;
+    color: #7c2d12;
+    font-size: clamp(2.2rem, 5vw, 4rem);
+    line-height: 1.12;
+}
+
+.premium-hero > p:not(.hero-label) {
+    max-width: 620px;
+    font-size: 1.08rem;
+    color: #5c4533;
+}
+
+.premium-hero .actions {
+    margin-top: 25px;
+}
+
+.premium-hero .btn,
+.idol-card .btn {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.premium-hero .btn:hover,
+.idol-card .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 7px 18px rgba(124, 45, 18, 0.2);
+}
+
+.hero-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 24px;
+    margin-top: 32px;
+    color: #7c2d12;
+    font-size: 0.92rem;
+}
+
+.home-collection {
+    margin: 45px 0;
+}
+
+.section-heading {
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.section-heading > .muted {
+    color: #a16207;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.section-heading h2 {
+    margin: 5px 0;
+    color: #7c2d12;
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+}
+
+.idol-card {
+    overflow: hidden;
+    padding: 0;
+    border: 1px solid #f0dfc2;
+    border-radius: 18px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.idol-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 14px 30px rgba(80, 45, 15, 0.12);
+}
+
+.idol-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 280px;
+    padding: 12px;
+    overflow: hidden;
+    background: linear-gradient(145deg, #fff9ed, #f8e6c8);
+}
+
+.idol-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.35s ease;
+}
+
+.idol-card:hover .idol-image img {
+    transform: scale(1.04);
+}
+
+.idol-details {
+    padding: 20px;
+}
+
+.idol-details h3 {
+    margin: 6px 0 10px;
+    color: #7c2d12;
+}
+
+.idol-details > p:not(.price) {
+    line-height: 1.65;
+}
+
+.stock-available {
+    color: #166534;
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.stock-unavailable {
+    color: #b91c1c;
+    font-weight: 700;
+}
+
+.image-placeholder {
+    text-align: center;
+    color: #9a3412;
+}
+
+.image-placeholder span {
+    font-size: 3rem;
+}
+
+.collection-action {
+    margin-top: 28px;
+    text-align: center;
+}
+
+.devotion-banner {
+    margin: 40px 0;
+    padding: 38px 24px;
+    border: 1px solid #e6c578;
+    border-radius: 20px;
+    background: linear-gradient(120deg, #7c2d12, #a34b16);
+    color: #fff8e8;
+    text-align: center;
+}
+
+.devotion-banner h2 {
+    margin: 8px 0;
+    color: #ffe6a3;
+}
+
+.devotion-banner > p {
+    line-height: 1.7;
+}
+
+@media (max-width: 600px) {
+    .premium-hero {
+        padding: 30px 20px;
+        border-radius: 16px;
+    }
+
+    .hero-features {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .idol-image {
+        height: 240px;
+    }
+
+    .devotion-banner {
+        padding: 28px 18px;
+    }
+}
+/* GIRIJATMAK ARTS NAVBAR */
+
+.premium-navbar {
+    background: linear-gradient(110deg, #6f210d, #963b12, #7c2d12);
+    border-bottom: 3px solid #e5bd63;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.premium-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #fff4d6;
+    text-decoration: none;
+}
+
+.brand-icon {
+    font-size: 2rem;
+}
+
+.brand-text {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.brand-text strong {
+    font-size: 1rem;
+    letter-spacing: 1.4px;
+}
+
+.brand-text small {
+    color: #f8d98c;
+    font-size: 0.75rem;
+}
+
+.premium-nav {
+    align-items: center;
+}
+
+.premium-nav a {
+    transition: color 0.2s ease, background 0.2s ease;
+}
+
+.premium-nav a:hover {
+    color: #ffdc82;
+}
+
+.premium-nav .nav-register {
+    padding: 9px 14px;
+    border-radius: 8px;
+    background: #f3d18a;
+    color: #6f210d;
+    font-weight: 700;
+}
+
+.premium-nav .nav-register:hover {
+    background: #fff0c2;
+    color: #6f210d;
+}
+
+@media (max-width: 600px) {
+    .premium-navbar {
+        gap: 14px;
+    }
+
+    .premium-nav {
+        gap: 12px;
+    }
+
+    .brand-text strong {
+        font-size: 0.9rem;
+    }
+}
+/* GIRIJATMAK ARTS PREMIUM FOOTER */
+
+.premium-footer {
+    margin-top: 55px;
+    padding: 40px max(5%, calc((100% - 1120px) / 2)) 0;
+    background: linear-gradient(120deg, #57200f, #7c2d12);
+    color: #fff4df;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1.5fr;
+    gap: 35px;
+    padding-bottom: 30px;
+}
+
+.footer-brand h2 {
+    margin: 8px 0;
+    color: #ffdf91;
+    font-size: 1.25rem;
+    letter-spacing: 1px;
+}
+
+.footer-logo {
+    font-size: 2rem;
+}
+
+.footer-brand p,
+.footer-message p {
+    max-width: 360px;
+    line-height: 1.8;
+    color: #f5dfc2;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-links h3,
+.footer-message h3 {
+    margin-top: 0;
+    color: #ffdf91;
+}
+
+.footer-links a {
+    color: #fff4df;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: #ffdf91;
+}
+
+.footer-bottom {
+    border-top: 1px solid #a96a42;
+    padding: 15px 0;
+    text-align: center;
+    color: #f5dfc2;
+    font-size: 0.9rem;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+@media (max-width: 700px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+    const searchInput = document.getElementById("idolSearch");
+    const priceFilter = document.getElementById("priceFilter");
+    const sortSelect = document.getElementById("idolSort");
+    const grid = document.getElementById("idolGrid");
+    const count = document.getElementById("idolCount");
+    const noResults = document.getElementById("noIdolsMessage");
+
+    if (!searchInput || !priceFilter || !sortSelect || !grid) {
+        return;
+    }
+
+    const cards = Array.from(grid.querySelectorAll(".idol-card"));
+
+    function updateCatalogue() {
+        const searchText = searchInput.value.trim().toLowerCase();
+        const selectedPrice = priceFilter.value;
+        const sortBy = sortSelect.value;
+
+        const matchingCards = cards.filter(function (card) {
+            const name = card.dataset.name.toLowerCase();
+            const description = card.dataset.description.toLowerCase();
+            const price = Number(card.dataset.price);
+
+            const matchesSearch =
+                name.includes(searchText) ||
+                description.includes(searchText);
+
+            let matchesPrice = true;
+
+            if (selectedPrice === "under500") {
+                matchesPrice = price < 500;
+            } else if (selectedPrice === "500to1000") {
+                matchesPrice = price >= 500 && price <= 1000;
+            } else if (selectedPrice === "above1000") {
+                matchesPrice = price > 1000;
+            }
+
+            return matchesSearch && matchesPrice;
+        });
+
+        matchingCards.sort(function (a, b) {
+            if (sortBy === "high") {
+                return Number(b.dataset.price) - Number(a.dataset.price);
+            }
+
+            if (sortBy === "name") {
+                return a.dataset.name.localeCompare(b.dataset.name);
+            }
+
+            return Number(a.dataset.price) - Number(b.dataset.price);
+        });
+
+        matchingCards.forEach(function (card) {
+            grid.appendChild(card);
+            card.hidden = false;
+        });
+
+        cards.forEach(function (card) {
+            if (!matchingCards.includes(card)) {
+                card.hidden = true;
+            }
+        });
+
+        count.textContent =
+            "Showing " + matchingCards.length + " of " + cards.length + " idols";
+
+        noResults.hidden = matchingCards.length !== 0;
+    }
+
+    searchInput.addEventListener("input", updateCatalogue);
+    priceFilter.addEventListener("change", updateCatalogue);
+    sortSelect.addEventListener("change", updateCatalogue);
+
+    updateCatalogue();
+});
+
+/* Highlight idols matching the active search/filter */
+.idol-card.filter-highlight {
+    border: 2px solid #d4a017;
+    box-shadow: 0 0 0 3px rgba(212, 160, 23, 0.18),
+                0 10px 28px rgba(154, 52, 18, 0.20);
+    transform: translateY(-4px);
+    transition: all 0.25s ease;
+}
+
+.idol-card.filter-highlight::before {
+    content: "✨ MATCHED";
+    display: inline-block;
+    margin: 12px 12px 0;
+    padding: 5px 10px;
+    border-radius: 20px;
+    background: #fff0bd;
+    color: #7c2d12;
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.idol-card.filter-highlight .price {
+    color: #b77900;
+}
+
+.idol-card.filter-highlight .btn {
+    background: linear-gradient(135deg, #b77900, #e4b93f);
+    color: #351707;
+    font-weight: 800;
+}
+
+/* Booking form enhancements */
+.booking-heading {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.booking-heading h1 {
+    color: #7c2d12;
+    font-size: clamp(2rem, 5vw, 3rem);
+}
+
+.booking-panel {
+    margin: 0 auto;
+    padding: 25px;
+    border-radius: 18px;
+}
+
+.booking-panel h2 {
+    color: #7c2d12;
+}
+
+.field-error {
+    display: block;
+    color: #b91c1c;
+    font-weight: 600;
+    margin-top: 5px;
+}
+
+.booking-total {
+    display: grid;
+    gap: 8px;
+    padding: 18px;
+    margin: 20px 0;
+    background: #fff5d9;
+    border: 1px solid #e6c578;
+    border-radius: 12px;
+}
+
+.booking-total strong {
+    color: #7c2d12;
+    font-size: 1.8rem;
+}
+
+.booking-total small {
+    color: #74685e;
+    line-height: 1.6;
+}
+
+.booking-submit {
+    width: 100%;
+    padding: 14px;
+    font-weight: 700;
+    background: linear-gradient(120deg, #7c2d12, #b45309);
+}
+
+@media (max-width: 600px) {
+    .booking-panel {
+        padding: 16px;
+    }
+}

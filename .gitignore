@@ -1,0 +1,7 @@
+node_modules/
+react-module/node_modules/
+react-module/dist/
+.DS_Store
+*.log
+.env
+.env.*
