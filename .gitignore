@@ -6,3 +6,10 @@ react-module/dist/
 __pycache__/
 vendor/
 .DS_Store
+node_modules/
+react-module/node_modules/
+react-module/dist/
+.env
+.venv/
+__pycache__/
+vendor/
